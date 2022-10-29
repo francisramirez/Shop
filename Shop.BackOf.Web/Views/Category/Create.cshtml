@@ -1,0 +1,70 @@
+﻿@model Shop.BackOf.Web.Models.CategoryList
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Create Category</h1>
+                </div><!-- /.col -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <hr />
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="card card-gray">
+                <div class="card-header">
+                    <h3 class="card-title">Category Form</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form asp-action="Create" class="form-horizontal">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                               
+                                    <div class="form-group">
+                                        <label asp-for="categoryName" class="control-label">Name</label>
+                                        <input asp-for="categoryName" class="form-control" />
+                                        <span asp-validation-for="categoryName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="description" class="control-label">Description</label>
+                                        <textarea asp-for="description" class="form-control" rows="3"></textarea>
+                                        <span asp-validation-for="description" class="text-danger"></span>
+                                    </div>
+                                   
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <a asp-action="Cagegories" class="btn btn-default">Back to List</a>
+                    </div>
+                    <!-- /.card-footer -->
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

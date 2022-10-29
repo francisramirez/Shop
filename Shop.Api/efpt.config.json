@@ -1,0 +1,57 @@
+﻿{
+   "ContextClassName": "ShopContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "Shop.Api",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[HR].[Employees]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Categories]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Products]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Suppliers]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Sales].[Customers]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Sales].[OrderDetails]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Sales].[Orders]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Sales].[Shippers]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}

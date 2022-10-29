@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84c85e2a7e2f4985b70bf5963aed1bc9" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="ShopModel.Employee" Width="1.5" PointX="2.625" PointY="7.375" />
+        <EntityTypeShape EntityType="ShopModel.Category" Width="1.5" PointX="11.75" PointY="9.625" />
+        <EntityTypeShape EntityType="ShopModel.Product" Width="1.5" PointX="10.875" PointY="4.875" />
+        <EntityTypeShape EntityType="ShopModel.Supplier" Width="1.5" PointX="7.375" PointY="10" />
+        <EntityTypeShape EntityType="ShopModel.Customer" Width="1.5" PointX="7.125" PointY="4.5" />
+        <EntityTypeShape EntityType="ShopModel.OrderDetail" Width="1.5" PointX="5.25" PointY="2.125" />
+        <EntityTypeShape EntityType="ShopModel.Order" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ShopModel.Shipper" Width="1.5" PointX="0.75" PointY="2.375" />
+        <AssociationConnector Association="ShopModel.FK_Employees_Employees" />
+        <AssociationConnector Association="ShopModel.FK_Orders_Employees" />
+        <AssociationConnector Association="ShopModel.FK_Products_Categories" />
+        <AssociationConnector Association="ShopModel.FK_OrderDetails_Products" />
+        <AssociationConnector Association="ShopModel.FK_Products_Suppliers" />
+        <AssociationConnector Association="ShopModel.FK_Orders_Customers" />
+        <AssociationConnector Association="ShopModel.FK_OrderDetails_Orders" />
+        <AssociationConnector Association="ShopModel.FK_Orders_Shippers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,41 @@
+﻿{
+   "ContextClassName": "ShopContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "Shop.DataModel",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Countries]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Categories]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Products]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[Production].[Suppliers]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}
