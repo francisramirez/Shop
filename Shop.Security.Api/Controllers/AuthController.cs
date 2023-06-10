@@ -34,7 +34,7 @@ namespace Shop.Security.Api.Controllers
             this.securityContext.Users.Add(new Data.Entity.User()
             {
                 Email = createUserRequest.Email,
-                Password = Encript.GetSHA256(createUserRequest.Password),
+                Password = Encript.GetSHA512(createUserRequest.Password),
                 Name = createUserRequest.Name
             });
 
@@ -48,7 +48,7 @@ namespace Shop.Security.Api.Controllers
             // Validar usuario//
 
             var user = this.securityContext.Users.SingleOrDefault(us => us.Email == createTokenRequest.Email
-                                             && us.Password == Encript.GetSHA256(createTokenRequest.Password));
+                                             && us.Password == Encript.GetSHA512(createTokenRequest.Password));
             if (user != null)
             {
                 var myToken = GetToken(user);
@@ -82,12 +82,12 @@ namespace Shop.Security.Api.Controllers
                      new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
                  }),
 
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                Expires = DateTime.UtcNow.AddHours(1), 
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
             };
 
-              
-            var token = tokenHandler.CreateToken(tokenDescriptor);
+          //  HmacSha256Signature
+          var token = tokenHandler.CreateToken(tokenDescriptor);
 
             tokenInfo.Token= tokenHandler.WriteToken(token);
             tokenInfo.Expiration = tokenDescriptor.Expires;
